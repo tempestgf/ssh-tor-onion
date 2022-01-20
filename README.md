@@ -2,10 +2,10 @@
 This repository explains briefly how to ssh through tor network , being able to ssh out of your home without a dedicated server.
 This  explanation is only for unix users.
 
-## Server Configuration
+### Server Configuration
 First we may install the tor package to make use of it, so depending your distribution, install it:
 ```apt install tor```
-### torrc
+#### torrc
 this is the configuration file that you can manipulate by using a text editor (vim) in this directory:
 ```/etc/tor/torrc```
 Here we will delete the next #'s:
@@ -23,7 +23,7 @@ If you acces to the "other_hidden_service" folder you will be able to see your h
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.onion (V3)
 This is your new tor ssh adress.
 
-## Client Configuration
+### Client Configuration
 
 I reccomend you to make an easy script to avoid typing that much.
 To be able to connect through tor we will need to make ssh go through the net tor. Thats why we will using the `torify` tool that comes with the tor package.
