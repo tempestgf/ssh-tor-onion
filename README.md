@@ -7,7 +7,9 @@ This explanation is only for Unix users.
 
 First we may install the tor package to make use of it, so depending on the distribution, install it:
 
-```apt install tor```
+```
+apt install tor
+```
 
 #### torrc
 
@@ -21,9 +23,8 @@ Here delete the next #'s:
 HiddenServiceDir /var/lib/tor/other_hidden_service/
 #HiddenServicePort 80 127.0.0.1:80
 HiddenServicePort 22 127.0.0.1:22
-
-
 ```
+
 This will create a folder on this directory (/var/lib/tor/other_hidden_service/).
 
 Can also change the port with whatever port not being used or the port 8022 if you are using Termux (HiddenServicePort 8022 127.0.0.1:8022).
@@ -31,7 +32,9 @@ Can also change the port with whatever port not being used or the port 8022 if y
 
 Accessing the "other_hidden_service" folder, it will be able to see the hostname.
 
-```cat hostname```
+```
+cat hostname
+```
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.onion (V3)
 
@@ -47,7 +50,9 @@ In the client side, type ```whoami``` to know which is the username.
 
 If it's needed to set a password to the account typing ```passwd```.
 
-`torify ssh user@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.onion`
+```
+torify ssh user@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.onion
+```
 
 After reaching the connection, it will prompt a request for the server password.
 
